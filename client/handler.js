@@ -6,8 +6,10 @@ module.exports = {
 
 function getFile(req, res){
 
-    console.log("inside getFile");
     var fileAddr = req.url;
+    if (fileAddr === "/") {
+        fileAddr = "/layout.html";
+    }
     if(fileAddr.indexOf('?') > -1){
         fileAddr = fileAddr.substring(0, fileAddr.indexOf('?'));
     }
