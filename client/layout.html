@@ -23,16 +23,12 @@
             url:'/service?' + $('#requestForm').serialize(),
             type:'post',
             success: function(data){
-
                 var columns = creatingTable(data);
-
                 for (var i = 0; i < data.length; i++) {
-
                     var row$ = $('<tr/>');
                     for (var columnIndex = 0; columnIndex < columns.length; columnIndex++) {
                         console.log(columns[columnIndex]);
                         var cellValue = data[i][columns[columnIndex]];
-
                         if (cellValue == null) {
                             cellValue = "";
                         }
@@ -42,7 +38,6 @@
                         else{
                             row$.append($('<td/>').html(cellValue));
                         }
-
                         row$.css("color", "white");
                     }
                     $("#jsonTable").append(row$);
@@ -51,11 +46,9 @@
             }
         });
     });
-
     function creatingTable(list) {
         var column = [];
         var headerTr$ = $('<tr style="background: #2CBBBB; color: #FFFFFF; column-width: 100px!important;" />');
-
         for (var i = 0; i < list.length; i++) {
             var row = list[i];
             for (var key in row) {
@@ -65,13 +58,13 @@
                 }
             }
         }
+        $("#jsonTable").empty();
         $("#jsonTable").append(headerTr$);
-
         return column;
     }
 </script>
 
-    <style type="text/css">
+<style type="text/css">
     body {
         background-image: url("background.jpg");
     }
@@ -84,7 +77,6 @@
         box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
         -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
         -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
-
     }
     .form-style-8 h2{
         background: #2CBBBB;
@@ -138,7 +130,5 @@
     .form-style-8 input[type="submit"]:hover {
         background:linear-gradient(to bottom, #34CACA 5%, #30C9C9 100%);
         background-color:#34CACA;
-
-
     }
 </style>

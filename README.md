@@ -51,7 +51,7 @@ The runtime environment interprets JavaScript using Google's V8 JavaScript engin
 
 * **Agnieszka Rakowska** - *Developer* - [agarak](https://github.com/agarak)
 
-* **Rafal Klimek** - *Developer* - [agarak](https://github.com/MKMZ)
+* **Rafal Klimek** - *Developer* - [MKMZ](https://github.com/MKMZ)
 
 * **Sven van Valburg** - *Developer* - [Svalburg](https://github.com/Svalburg)
 
